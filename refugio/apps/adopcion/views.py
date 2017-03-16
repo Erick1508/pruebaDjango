@@ -1,6 +1,7 @@
 from django.shortcuts import render
+
 from django.http import HttpResponse
 # Create your views here.
 
 def index_adopcion(request):
-	return HttpResponse("Soy la página principal de la app adopción")
+	return HttpResponse("Soy la pagina principal de la app adopcion")

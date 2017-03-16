@@ -1,8 +1,8 @@
 from django.conf.urls import url
-from apps.mascota.views import index
+from refugio.apps.mascota.views import index
 
 from django.conf.urls import url
-from apps.mascota.views import index, mascota_view
+from refugio.apps.mascota.views import index, mascota_view
 
 urlpatterns = [
     url(r'^$', index, name= 'index'),

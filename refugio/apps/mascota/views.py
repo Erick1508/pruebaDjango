@@ -1,11 +1,11 @@
 from django.shortcuts import render, redirect
 from django.http import HttpResponse
-from apps.mascota.forms import MascotaForm
+from refugio.apps.mascota.forms import MascotaForm
 
 # Create your views here.
 
 def index(request):
-	return render(request,'mascota/index.html')
+	return render(request,'index.html')
 
 def mascota_view(request):
 	if request.method == 'POST':
@@ -16,4 +16,4 @@ def mascota_view(request):
 	else:
 		form = MascotaForm()
 
-	return render(request,'mascota/mascota_form.html', {'form': form})
+	return render(request,'mascota_form.html', {'form': form})

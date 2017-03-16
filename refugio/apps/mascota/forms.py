@@ -1,5 +1,5 @@
 from django import forms
-from apps.mascota.models import Mascota
+from refugio.apps.mascota.models import Mascota
 
 class MascotaForm(forms.ModelForm):
 
