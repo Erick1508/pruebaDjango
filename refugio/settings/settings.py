@@ -11,6 +11,7 @@ https://docs.djangoproject.com/en/1.10/ref/settings/
 """
 
 import os
+from django.core.urlresolvers import reverse_lazy
 
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
 BASE_DIR = os.path.dirname(os.path.dirname(__file__))
@@ -39,6 +40,7 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'refugio.apps.adopcion',
     'refugio.apps.mascota',
+    'refugio.apps.usuario',    
 ]
 
 MIDDLEWARE = [
@@ -59,6 +61,8 @@ TEMPLATES = [
         'DIRS': [
             os.path.join(BASE_DIR, '../bases'),
             os.path.join(BASE_DIR, 'apps/mascota/templates'),
+            os.path.join(BASE_DIR, 'apps/adopcion/templates'),
+            os.path.join(BASE_DIR, 'apps/registration/templates'),
         ],
         'APP_DIRS': True,
         'OPTIONS': {
@@ -135,3 +139,13 @@ STATIC_URL = '/static/'
 STATICFILES_DIRS = (
     os.path.join(BASE_DIR, '../static/'),
 )
+
+LOGIN_REDIRECT_URL = reverse_lazy('mascota:mascota_listar')
+LOGOUT_REDIRECT_URL = reverse_lazy('login')
+
+EMAIL_USE_TLS = True
+EMAIL_HOST = 'smtp.gmail.com'
+EMAIL_PORT = 587
+EMAIL_HOST_USER = ''
+EMAIL_HOST_PASSWORD = ''
+EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'

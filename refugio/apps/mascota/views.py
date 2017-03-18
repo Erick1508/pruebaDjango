@@ -8,8 +8,8 @@ from refugio.apps.mascota.models import Mascota
 
 # Create your views here.
 
-def index(request):
-	return render(request,'index.html')
+#def index(request):
+#	return render(request,'index.html')
 
 def mascota_view(request):
 	if request.method == 'POST':

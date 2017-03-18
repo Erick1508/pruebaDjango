@@ -30,8 +30,7 @@ class PersonaForm(forms.ModelForm):
 			'edad' : forms.TextInput(attrs={'class':'form-control'}),
 			'telefono' : forms.TextInput(attrs={'class':'form-control'}),
 			'correo' : forms.TextInput(attrs={'class':'form-control'}),
-			'domicilio' : forms.Textarea(attrs={'class':'form-control'}),
-			
+			'domicilio' : forms.Textarea(attrs={'class':'form-control'}),			
 		}
 
 class SolicitudForm(forms.ModelForm):
